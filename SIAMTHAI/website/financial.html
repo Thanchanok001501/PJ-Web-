@@ -1,0 +1,217 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SIAMTHAI</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+
+    </head>
+
+    <body  style="background-color:rgba(248, 242, 242, 0.89);">
+
+        <nav class="navbar navbar-expand-lg bg-dark  " >
+            <div class="container-fluid"  >
+                <img src="../Logo/S-IAM.png"  width="80" height="80">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link active  text-warning"  aria-current="page" href="Home.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="Login.html">LOGIN</a>
+                    </li>
+                  </ul>
+            </div>
+        </nav>
+     
+        
+        <div class="container mt-5" >
+
+         
+            <h1 class="text-center">จองห้องพัก</h1><br>   
+  
+            <div class="row mb-3 ">
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="form-label">Room</label>
+                    <select id="nameRoom" class="form-select" aria-label="Default select example" >
+                      <option selected>select</option>
+                      <option value="5760">สยามดีลักซ์</option>
+                      <option value="6300">สยามพรีเมียร์</option>
+                      <option value="10350">สยามสวีท</option>
+                      <option value="11700">สยามการ์เดน</option>
+                      <option value="22950">สยามรอยัลสวีท</option>
+                      <option value="135450">สยามเพรสซิเดนเชียลสวีท</option>
+                    </select>
+                </div><div class="col">
+
+                    <label for="exampleFormControlInput1" class="form-label" >Number of rooms</label>
+                    <select id="numRoom" class="form-select" aria-label="Default select example">
+                      <option selected>select</option>
+                      <option  value="1">1</option>
+                      <option  value="2">2</option>
+                      <option  value="3">3</option>
+                      <option  value="4">4</option>
+                      <option  value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="form-label">People</label>
+                    <select id="usermemder" class="form-select" aria-label="Default select example">
+                      <option selected>select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="3">4</option>
+                      <option value="3">5</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="row  ">
+                    <form>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date">
+                </div>
+            </div >
+
+    
+            <div class="row mb-3 ">
+               
+                <div class="col">
+                    <label class="form-label">First name</label>
+                    <input type="text" class="form-control" id="fName" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col">
+                    <label class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lName" placeholder="Last name" aria-label="Last name">
+                </div>
+            </div>
+                
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="txtEmail" placeholder="name@example.com">     
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">telephone number</label>
+                    <input type="text" class="form-control" placeholder="xxx-xxxx-xxxr" >
+                </div>
+                
+            <div class="d-grid gap-2">
+                <button id="btnSave"class="btn  text-white" onclick="sumMoney()" style="background-color: rgb(221, 171, 46);" type="button">ยืนยัน</button>
+                    
+            </div>
+
+            <div id="msg1" style="display: none;" class="alert alert-success" role="alert">
+                .........
+              </div>
+
+             
+
+              
+
+        </div>
+
+    
+
+        
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                  <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Company, Inc</span>
+              </div>
+            </footer>
+          </div>
+       
+          <script>
+          /*  $(document).ready(function()
+         {
+             $("#msg1").hide();
+
+             $("#btnSave").click(function()
+              {
+              var fname = $("#fName").val()
+              alert(fname +  " ลงทะเบียนจองห้องพักเสร็จสิ้น")
+                 
+           });
+
+        }); */
+
+            const getText = (el) => {
+                if (el.selectedIndex === -1) {
+                  return null;
+                }
+                return el.options[el.selectedIndex].text;
+              }
+
+            function allRoom (){
+                var moneyRoom = document.getElementById("nameRoom").value;
+                var myRoom = document.getElementById("numRoom").value;
+                var mynameRoom = document.getElementById("nameRoom");
+                var numberRoom = document.getElementById("numRoom");
+                var pRoom = document.getElementById("usermemder");
+                var mnR = getText(mynameRoom);
+                var nR = getText(numberRoom);
+                var pR = getText(pRoom);
+                return {moneyRoom,myRoom,mnR,nR,pR};
+            }
+            function sumMoney() {
+                var summitR = allRoom();
+                var show = summitR.moneyRoom;
+                var rshow = summitR.myRoom;
+                var sump = Number(summitR.moneyRoom)*Number(summitR.myRoom);
+                var fname = $("#fName").val()
+                var lname = $("#lName").val()
+                if(fname == "" || lname == ""){
+                    
+                    //alert("ข้อมูลไม่ครบ ไม่สามารถทำรายการได้!!");
+                    Swal.fire(
+                        'ข้อมูลที่กรอกไม่ครบ',
+                        'ไม่สามารถทำรายการได้!!',
+                        'error'
+                        );
+
+                }else{
+                    if (show != "select" && rshow != "select") {
+                        document.getElementById("msg1").style.display = "block";
+                        document.getElementById("msg1").innerHTML = "ห้อง : " + summitR.mnR + "<br>" + "จำนวนห้อง : " + summitR.nR + "<br>" + "กี่คน : " + summitR.pR + "<br>" + "ค่าชำระ : " + sump ;
+                        Swal.fire(
+                                        'ลงทะเบียนเสร็จสิ้น!!',
+                                        fname + " " + lname,
+                                        'success'
+                                        );
+                      }
+                      else {
+                        Swal.fire(
+                                        'ข้อมูลที่เลือกไม่ครบ',
+                                        'ไม่สามารถทำรายการได้!!',
+                                        'error'
+                                        );
+                      //  alert("");
+                        //location.reload();
+                      }
+                }
+              }              
+            /*function test(){
+                var moneyRoom = allRoom()
+                alert(moneyRoom.moneyRoom + " " + moneyRoom.myRoom + " " + moneyRoom.mnR  + " " + moneyRoom.nR + " " + moneyRoom.pR);
+            }*/
+     
+        </script>
+
+      
+
+
+    </body>
+
+
+</html>
